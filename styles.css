@@ -245,13 +245,13 @@ p {
     border: none;
   }
   .work-card {
-    width: 335px;
+    width: 100%;
   }
   .work-card::after {
     display: none;
   }
   .project-card {
     padding: 10px;
-    width: 335px;
+    width: 100%;
   }
 }
