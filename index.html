@@ -14,7 +14,7 @@
         <span class='subtitle' style="margin:5px 0">I'm a full stack JavaScript engineer based in New Caledonia</span>
         <div class='container-row attributes-row'>
           <div class='attribute'>
-            <span class="red-text highlighted">18</span>
+            <span class="red-text highlighted" id='ageContainer'></span>
             <span style="white-space:nowrap" class='subtitle'>Years Old</span class='subtitle'>
           </div>
           <div class='attribute'>
@@ -65,6 +65,31 @@
       <h4 class='header'>Projects</h4>
       <div class='container-row project-container'>
         <div class='project-card container-column'>
+          <h4 class="title">View</h4>
+          <span class='subtitle'>Watch YouTube videos together with your friends</span>
+          <div class='tag-container'>
+            <div class='tag'>Vue.js</div>
+            <div class='tag'>Socket.io</div>
+            <div class='tag'>YouTube API</div>
+          </div>
+          <div class="container-row" style="margin-top:auto">
+            <a class='button primary' href='https://view.now.sh' target='_blank'>Visit Website</a>
+            <a class='button' href='https://github.com/AkiraLaine/view' target='_blank'>GitHub</a>
+          </div>
+        </div>
+        <div class='project-card container-column'>
+          <h4 class="title">MostPlayed</h4>
+          <span class='subtitle'>A simple app to show your most played Spotify songs and artists</span>
+          <div class='tag-container'>
+            <div class='tag'>Vue.js</div>
+            <div class='tag'>Spotify API</div>
+          </div>
+          <div class="container-row" style="margin-top:auto">
+            <a class='button primary' href='https://mostplayed.now.sh' target='_blank'>Visit Website</a>
+            <a class='button' href='https://github.com/AkiraLaine/MostPlayed' target='_blank'>GitHub</a>
+          </div>
+        </div>
+        <div class='project-card container-column'>
           <h4 class="title">LetsMeet</h4>
           <span class='subtitle'>A meeting coordination app to find best times and dates for everyone to meet</span>
           <div class='tag-container'>
@@ -90,29 +115,6 @@
             <a class='button' href='https://github.com/Musare/MusareMeteor' target='_blank'>GitHub</a>
           </div>
         </div>
-        <div class='project-card container-column'>
-          <h4 class="title">Cardboard</h4>
-          <span class='subtitle'>Cardboard - a simple Pinterest clone. No, not the material.</span>
-          <div class='tag-container'>
-            <div class='tag'>Node/Express</div>
-            <div class="tag">jQuery</div>
-          </div>
-          <div class="container-row" style="margin-top:auto">
-            <a class='button' href='https://github.com/AkiraLaine/Cardboard' target='_blank'>GitHub</a>
-          </div>
-        </div>
-        <div class='project-card container-column'>
-          <h4 class="title">Sound</h4>
-          <span class='subtitle'>A simple YouTube music player</span>
-          <div class='tag-container'>
-            <div class='tag'>Youtube API</div>
-            <div class="tag">Vue.js</div>
-            <div class="tag">Electron</div>
-          </div>
-          <div class="container-row" style="margin-top:auto">
-            <a class='button' href='https://github.com/AkiraLaine/Sound' target='_blank'>GitHub</a>
-          </div>
-        </div>
       </div>
     </section>
     <section style="line-height:25px">
@@ -122,4 +124,10 @@
     </section>
   </main>
 </body>
+<script type="text/javascript">
+  const ageContainer = document.querySelector('#ageContainer')
+  let age = new Date().getFullYear() - 1998
+  if (new Date().getMonth() < 4) age--
+  ageContainer.innerHTML = age
+</script>
 </html>
